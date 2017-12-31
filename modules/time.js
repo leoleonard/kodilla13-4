@@ -3,12 +3,13 @@ var uptime = os.uptime();
 
 
 function timeMin() {
-  return (uptime / 60).toFixed(0), "min";
+  console.log((uptime / 60).toFixed(0), "min");
+
 };
 
 
 function timeHour() {
-  return (uptime /360).toFixed(0), "h";
+  return ((uptime /360).toFixed(0), "h");
 };
 
 
