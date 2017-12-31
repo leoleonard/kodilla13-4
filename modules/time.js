@@ -1,17 +1,13 @@
 var os = require('os');
 var uptime = os.uptime();
 
+function timeConverter(seconds) {
+  var numberOfHours = Math.floor(seconds/3600);
+  var numberOfMinutes = Math.floor((seconds % 3600)/ 60);
+  var numberOfSeconds = Math.floor(((seconds % 3600)% 60) % 60);
 
-function timeMin() {
-  console.log((uptime / 60).toFixed(0), "min");
+  return (numberOfHours + " hours, " + numberOfMinutes + " minutes, " + numberOfSeconds + " seconds.");
 
-};
+}
 
-
-function timeHour() {
-  return ((uptime /360).toFixed(0), "h");
-};
-
-
-exports.print = timeMin;
-exports.print = timeHour;
+exports.timeConverter = timeConverter;
